@@ -1,4 +1,16 @@
 KhmerDirectory::Application.routes.draw do
+  get "letters/index"
+
+  get "letters/show"
+
+  get "companies/edit"
+
+  get "companies/index"
+
+  get "companies/new"
+
+  get "companies/show"
+
   get "locations/edit"
 
   get "locations/index"
@@ -10,6 +22,8 @@ KhmerDirectory::Application.routes.draw do
   get "categories/new"
   
   resources :categories
+  resources :companies
+  resources :letters
   resources :locations
   #root :to => "categories#show"
 

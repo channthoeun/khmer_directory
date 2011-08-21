@@ -1,0 +1,23 @@
+<% title "Select a Letter" %>
+<%= form_tag companies_path, :method => 'get', :id => "companies_search" do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "ស្វែងរក", :name => nil %>
+  </p>
+<% end %>
+
+<% for letter in @letters %>
+	<%= link_to letter.char, company_path(letter)%>
+<% end %>
+
+<% for company in @companies %>
+	<div class="company">	    
+      <%= company.name %>
+    </div>         
+<% end %>
+
+<% for category in Category.all %>
+  <div class="category">
+    <p><%= link_to h(category.name), category %><br /></p>   
+  </div>
+<% end %>

@@ -1,0 +1,5 @@
+<% title "អាជីវកម្មផ្ដើមឡើងដោយអក្សរ #{@letter.char}" %>
+<h2>អាជីវកម្មដែលមានឈ្មោះផ្ដើមដោយព្យញ្ជនៈ &quot;<%= @letter.char %>&quot;</h2>
+<p><%= link_to "ជ្រើសរើសតួរអក្សរ", companies_path %></p>
+
+<%= render :partial => @letter.companies %>
