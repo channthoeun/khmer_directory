@@ -1,0 +1,6 @@
+<%= @location.name %>
+<p>
+  <%= link_to "កែប្រែ", edit_location_path(@category) %> |
+  <%= link_to "លុប", @location, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "បង្ហាញទីតាំងទាំងអស់", locations_path %>
+</p>

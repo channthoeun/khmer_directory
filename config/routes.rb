@@ -1,6 +1,16 @@
 KhmerDirectory::Application.routes.draw do
+  get "locations/edit"
+
+  get "locations/index"
+
+  get "locations/new"
+
+  get "locations/show"
+
   get "categories/new"
+  
   resources :categories
+  resources :locations
   #root :to => "categories#show"
 
   # The priority is based upon order of creation:
