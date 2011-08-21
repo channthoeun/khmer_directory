@@ -1,0 +1,16 @@
+<% title "Categories" %>
+
+<% for category in @categories %>
+  <div class="category">
+    <h3><%= link_to h(category.name), category %></h3>
+    <div class="actions">
+      <%= link_to "កែប្រែ", edit_category_path(category) %> |
+      <%= link_to "លុប", category, :confirm => 'Are you sure?', :method => :delete %>
+    </div>
+  </div>
+<% end %>
+<br />
+<div class="paginate">
+<%= will_paginate @categories %>
+</div>
+<p><%= link_to "New Category", new_category_path %></p>
