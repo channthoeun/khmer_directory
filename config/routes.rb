@@ -1,4 +1,8 @@
 KhmerDirectory::Application.routes.draw do
+  get "categories/new"
+  resources :categories
+  #root :to => "categories#show"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
